@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+header .header-images {
+    display: flex; /* 使用 Flexbox 排版 */
+    justify-content: space-between; /* 圖片間平均分配 */
+    width: 960px; /* 設置總寬度為 960px */
+    margin: 20px auto; /* 使圖片容器居中 */
+}
+
+header .header-image {
+    width: 230px; /* 每張圖片的寬度，確保四張圖片總寬為 960px */
+    height: auto; /* 自動保持圖片比例 */
+    border-radius: 8px; /* 圓角效果，可選 */
+}
+.slider_container {
+    position: relative;
+    max-width: 980px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider_container div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-animation: round 8s linear infinite;
+    animation: round 8s linear infinite;
+}
+
+.slider_container div img {
+    width: 100%;
+}
+
+@-webkit-keyframes round {
+    12.5% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    25% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    37.5% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+@keyframes round {
+    12.5% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    25% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    37.5% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+.slider_container div:nth-child(4) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.slider_container div:nth-child(3) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.slider_container div:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.slider_container div:nth-child(1) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.buttons a:hover {
+    background: #0056b3;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
